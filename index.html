@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+	<head>
+		<meta charset="utf-8">
+		<title>FireBase | Aver </title>
+		<!-- CDN BOOTSTRAP -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<!-- CDN FONT AWESOME -->
+		<script src="https://kit.fontawesome.com/eda82ef9d0.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+
+		<!-- ###################################### -->
+		<!-- NAVEGACION -->
+		<!-- ###################################### -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container">
+				<a class="navbar-brand" href="#" style="font-weight: 700; font-size: 25px;">LOGO</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item noLogeado" style="display: none;">
+							<a class="nav-link" href="#" data-toggle="modal" data-target="#ingresarModal">Ingresar_App</a>
+						</li>
+						<li class="nav-item noLogeado" style="display: none;">
+							<a class="nav-link" href="#" data-toggle="modal" data-target="#registrarceModal">Registrarce</a>
+						</li>
+						<li class="nav-item siLogeado" style="display: none;">
+							<a class="nav-link" href="#" id="salir">Salir</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+
+		<!-- ###################################### -->
+		<!-- CONTENIDO PRINCIPAL (PUBLICACIONES DEL SITIO)-->
+		<!-- ###################################### -->
+		<div class="container p-5">
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+					<ul class="list-group publicaciones"
+						<li class="list-group-item">
+
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- ###################################### -->
+		<!-- MODALS DE BOOTSTRAP (REGSITRARCE)-->
+		<!-- ###################################### -->
+		<div class="modal fade" id="registrarceModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Registrate es GRATIS</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form action="" id="registrarce-form">
+							<div class="form-group">
+								<input type="text" id="registrarce-email" class="form-control" placeholder="Email..." required>
+							</div>
+							<div class="form-group">
+								<input type="password" id="registrarce-password" class="form-control" placeholder="Password..." required>
+							</div>
+							<div class="modal-footer">
+								<button type="submit" class="btn btn-primary">Registrarce</button>
+							</div>
+							<div class="alert alert-danger text-center emailExist" role="alert" style="display: none;">
+								El Correo ingresado ya es usado por otra cuenta!
+								<button type="button" class="close" style="display: block">
+									<!--  data-dismiss="alert" aria-label="Close" -->
+								  <span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ################################################################ -->
+		<!-- MODALS DE BOOTSTRAP (VOLVER A INGRESAR(si ya tienes una cuenta?))-->
+		<!-- ################################################################ -->
+
+		<div class="modal fade" id="ingresarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Ingresar</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form action="" id="ingresar-form">
+							<div class="form-group">
+								<input type="text" id="ingresar-email" class="form-control" placeholder="Email..." required>
+							</div>
+							<div class="form-group">
+								<input type="password" id="ingresar-password" class="form-control" placeholder="Password..." required>
+							</div>
+							<div class="modal-footer">
+								<button type="submit" class="btn btn-secondary btn-block">Ingresar</button>
+								<button type="button" class="btn btn-info btn-block" id="googleIni"><i class="fab fa-google" style="font-size: 22px; margin-right: 10px;"></i>Iniciar Sesión con Google</button>
+								<button type="button" class="btn btn-primary btn-block" id="facebookIni"><i class="fab fa-facebook" style="font-size: 25px; margin-right: 10px;"></i>Iniciar Sesión con Facebook</button>
+							</div>
+							<div class="alert alert-danger text-center emailExist" role="alert" style="display: none;">
+								Nombre de Usuario y/o Contraseña incorrectas!
+								<button type="button" class="close" style="display: block">
+									<!--  data-dismiss="alert" aria-label="Close" -->
+								  <span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- ###################################### -->
+		<!-- BOOTSTRAP SCRIPT -->
+		<!-- ###################################### -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+		<!-- ###################################### -->
+		<!-- FIREBASE SCRIPTS -->
+		<!-- ###################################### -->
+
+		<!-- The core Firebase JS SDK is always required and must be listed first (SCRIPTS PRINCIPAL)-->
+		<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+		     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+		<!-- SCRIPT PARA AUTENTICACION DE FIREBASE (auth.js)-->
+		<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-auth.js"></script>
+		<!-- SCRIPT PARA EL USO DE ALMACENADO EN FIREBASE CON FIRESTORE -->
+		<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-firestore.js"></script>
+
+		<script>
+		  // Your web app's Firebase configuration
+		  var firebaseConfig = {
+		    apiKey: "AIzaSyDmhJu9579qWYpYXSuGNmv15RnzNCymSUs",
+		    authDomain: "fb-tutorial-1c766.firebaseapp.com",
+		    databaseURL: "https://fb-tutorial-1c766.firebaseio.com",
+		    projectId: "fb-tutorial-1c766",
+		    storageBucket: "fb-tutorial-1c766.appspot.com",
+		    messagingSenderId: "891178373702",
+		    appId: "1:891178373702:web:eebd21f679a1b927f73047"
+		  };
+		  // Initialize Firebase
+		  firebase.initializeApp(firebaseConfig);
+		  // creo un objeto para poder conectarme a firebase y autentificar
+		  const auth = firebase.auth();
+		  // constante para interactuar con firestore
+		  const fs = firebase.firestore();
+
+		  
+		</script>
+
+		<!-- ###################################### -->
+		<!-- CODIGO PERSONALIZADO -->
+		<!-- ###################################### -->
+		<script src="main.js" charset="utf-8"></script>
+
+
+	</body>
+
+</html>

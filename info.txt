@@ -1,0 +1,32 @@
+Firebase utiliza el consepto NOsql, los que nos permite hacer Firebase
+es guardar un archivo JSON enorme, es decir vamos a guardar "PARES CLAVE : VALOR"
+_Ejemplo guardaremos una coleccion : que no es mas que un conjunto de objetos JSON.
+
+publicaciones {
+                titulo: 'mi primer titulo',
+                descripcion: 'este es el contenido de la úblicacion'
+               }
+
+Autenticar con google: solo te pide un correo para que te podan mandar errores
+o consultas relasionados con la app
+
+Autenticar con facebook: te pide(solo al dueño no aca usuario que visite tu app)
+que registres tu app en "faceebook developers".
+Y asi seguir algunos pasos como copiar id de la app y contraseña, copiarlas
+tanto en facebook developers como en firestore. Asi los usuarios podran logearse
+atraves de facebook...
+
+
+CAPTURA DE ERROR 400 :
+
+    Error 400 = depende del atributo "code" que nos devuelve firestore es, usuario
+ya existe o el usuario ingresado no es valido.
+    Pude capturar ese error con la comparacion ( error.code === "th/email-already-in-use")
+del tipo "El correo ingresado ya esta siendo usado por otra cuenta".
+    Y el error usuario invalido con ( error.code === "auth/user-not-found")
+del tipo "El usuario no es valido o contraseña incorrecta"
+    Error de contraseña invalida (error.code === "auth/wrong-password")
+del tipo "El usuario no es valido o contraseña incorrecta"
+
+    Puedes ver estos atrivutos o metodos del error con un "console.log(captura de error)"
+En este caso seria console.log(error) (linea: 97 main.js;  linea: 62 main.js)
