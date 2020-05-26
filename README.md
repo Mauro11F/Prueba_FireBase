@@ -3,4 +3,3 @@ Aplicacion con firestore de firebase y autentificacion mediante google y faceboo
 
 
 app web: https://mauro11f.github.io/Prueba_FireBase/
-
